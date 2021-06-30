@@ -1,20 +1,21 @@
 from django.db import models
 
 class Campaign(models.Model):
+    id           = models.BigIntegerField(primary_key=True)
     created_date = models.DateTimeField(auto_now_add=True)
     
     class Meta:
         db_table = 'campaigns'
 
 class CampaignPerDate(models.Model):
-    date        = models.DateTimeField()
-    reach       = models.IntegerField()
-    spend       = models.IntegerField()
-    clicks      = models.IntegerField()
-    impressions = models.IntegerField()
-    installs    = models.IntegerField()
-    views       = models.IntegerField()
-    ctr         = models.IntegerField()
+    date        = models.DateTimeField(null=True)
+    reach       = models.IntegerField(null=True)
+    spend       = models.IntegerField(null=True)
+    clicks      = models.IntegerField(null=True)
+    impressions = models.IntegerField(null=True)
+    installs    = models.IntegerField(null=True)
+    views       = models.IntegerField(null=True)
+    ctr         = models.IntegerField(null=True)
     campaign    = models.ForeignKey('Campaign', on_delete=models.CASCADE)
 
     class Meta:
