@@ -1,7 +1,8 @@
 import json
 
 
-sample_data = { "data" :[
+sample_data = { 
+    "data" :[
 {
  "start_time": "2020-01-20T15:26:17+0900",
  "end_time": "2020-01-20T15:26:17+0900",

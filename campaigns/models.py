@@ -8,7 +8,7 @@ class Campaign(models.Model):
         db_table = 'campaigns'
 
 class CampaignPerDate(models.Model):
-    date        = models.DateTimeField(null=True)
+    date        = models.DateField(null=True)
     reach       = models.IntegerField(null=True)
     spend       = models.IntegerField(null=True)
     clicks      = models.IntegerField(null=True)
